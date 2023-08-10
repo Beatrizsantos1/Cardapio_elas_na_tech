@@ -1,0 +1,292 @@
+/*Estilização padrão das paginas*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  /*MInha pagina vai ser da cor branca*/
+  body {
+    background: rgb(244, 255, 255);
+    padding-top: 5%;
+  }
+  
+  /*Minha div HEADER está ocupando a tela toda do pc quando abre
+  e também ela esta com a cor rosa*/
+  header {
+    width: 100%;
+    height: 100vh;
+    background: #e54d89;
+  }
+  
+  /*Container Pai inglobando toda a área do cabeçalho*/
+  /*Display flex é colocado na div pai, porém a aplicação acontece na div filho ("logo img" e "ul li a")*/
+  #container-father {
+   /* border: 3px solid red; */
+    width: 100%;
+    height: 15%;
+    display: flex; /*responsalvel por deixar os conteudos as divs filhos em linha*/
+    align-items: center; /*responsavel por alinhar os intens ao centro porem na posição y*/
+    justify-content: space-around; /*responsavel por deixar os elementos distanciado na mesma porpoção, e não deixa o elemento encotado na lateral da pagina*/
+    background-color: #e54d89;
+    position: fixed; /*deixa o menu fixo na tela*/
+    top: 0;
+    border-bottom: solid #70bdca;
+  }
+  
+  /*Container filho (display flex sendo aplicado nela) possui a imagem da logo da loja e tem
+  largura e uma atura deimitada*/
+  .logo {
+    width: 106px;
+    height: 86px;
+  }
+  
+  /*é a div filho do container-father mas também é a div pai do "li" e "a" do menu */
+  ul {
+    display: flex; /*display flex tem a função de colocar os intens da lista um ao lado do outro na div "li" e "a" (filhos)*/
+    list-style: none;
+    gap: 45px; /* responsavel por da um distania lateral nas palvras do menu */
+    margin-right: 350px;
+  }
+  
+  /* Essa div esta recebendo o display flex intanciado na div "ul" */
+  ul li a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  /* colocando animação no menu do cabeçalho */
+  ul li a:hover {
+    text-transform: uppercase; /* Aumenta a palavra quando o mouse é passado em cima */
+    color: #00ffff;
+    border-bottom: solid 1px;
+  }
+  
+  #container-father1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #container-title {
+    width: 35%;
+   /* border: 3px solid red; */
+  }
+  
+  #titulo {
+    /* border: 3px solid red; */
+    width: 667px;
+  }
+  
+  #one-titulo,
+  #two-titulo {
+    font-family: "Press Start 2P", cursive;
+    color: #ffffff;
+    font-size: 36px;
+    margin-left: 56px;
+  }
+  
+  #two-titulo {
+    font-size: 67px;
+    margin-top: 15px;
+    color: #70bdca;
+  }
+  #first-paragraph {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 26px;
+    padding: 47px 0px 80px 53px;
+    color: #ffffff;
+  }
+  
+  /*estilo do botão*/
+  button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 45px;
+    font-weight: bold;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    color: aqua;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid aqua;
+  
+    margin-left: 57px;
+  }
+  
+  button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391;
+    cursor: pointer;
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: aqua;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  button:hover::before {
+    width: 250%;
+  }
+  /*Termina o botão*/
+  
+  #img-main {
+    margin-top: 47px;
+    width: 110%;
+    margin-right: -10px;
+  
+    /* border: 3px solid red; */
+  }
+  
+  /*excluir essa estilização pois so está como marcação*/
+  #container-menu {
+   /* border: 3px solid red; */
+  }
+  
+  /*Estilização da div main*/
+  main {
+    width: 100%;
+  }
+  
+  .Milk-Sheck-500ml {
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    margin-left: 32px;
+    /*display: inline-block;
+    border: 3px solid red;*/
+  }
+  
+  .text-milksheck {
+    /* display: inline-block;*/
+    margin-left: 23px;
+    margin-bottom: 27px;
+    font-size: 20px;
+  }
+  .paragraph-milk-sheck {
+    color: #000000;
+    border: 3px solid #70bdca;
+    margin-top: 24px;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    
+  }
+  h2 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 35px;
+    color: #e54d89;
+    margin-left: 5px;
+    padding-top: 7%;
+    border-bottom: solid #70bdca;
+  }
+  
+  /*Estilização da div footer*/
+  footer {
+    background-color: #e54d89;
+  }
+  #logo-footer {
+    text-align: center;
+  }
+  #logo-footer img {
+    margin-top: 11px;
+    margin-bottom: 6px;
+    width: 175px;
+    height: 122px;
+    margin-left: 90px;
+  }
+  #redes-sociais img {
+    width: 35px;
+    border-radius: 50%;
+    margin: 5px;
+    margin-right: 30px;
+    text-align: right;
+  }
+  #redes-sociais {
+    margin-left: 463px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 26px;
+  }
+  #container-father2 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  #autor {
+    text-align: center;
+    margin-top: 15px;
+    color: #ffffff;
+    margin-left: 90px;
+  }
+  #whatssap img {
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .button-footer {
+    font-size: 15px;
+    margin-left: 30px;
+  }
+
+  .button-order{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 40%;
+    position: fixed;
+    bottom: 56px;
+    right: 7px;
+    top: 100vh;
+  }
+  
+  /*#quebrar-linha {
+    display: inline-block;
+    width: 100%;
+    height: 15vh;
+    border: 3px solid red;
+  }
+  
+  /*.price {
+    border: 3px solid red;
+    width: 65px;
+    background: darkred;
+    display: inline-block;
+  }
+  
+  
+  #container-menu #logo img {
+    margin-left: 5px;
+    border: 3px solid red;
+  }
+  
+  #mapa img {
+    width: 35px;
+  }
+  
+  */
+
+
+
